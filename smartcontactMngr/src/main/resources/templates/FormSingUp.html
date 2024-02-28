@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Register</title>
+</head>
+<body>
+	<section class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-2">
+				<div class="my-card mt-2">
+				 <div class="text-center">
+				 <img class="mx-auto" style="width:50px" alt="" src="" th:src="@{/image/edit.png}"/>
+				 </div>
+					<h1 class="text-center">Register here!!</h1>
+
+					<form action="" th:action="@{/do_register}" method="post">
+
+						<!-- name field -->
+						<div class="form-group py-3">
+							<label for="name_field">Name</label> <input type="text"
+								class="form-control" id="name_field"
+								aria-describedby="emailHelp" placeholder="Enter name">
+						</div>
+
+						<!-- email field -->
+						<div class="form-group py-3">
+							<label for="email_field">Email</label> <input type="email"
+								class="form-control" id="email_field"
+								aria-describedby="emailHelp" placeholder="Enter email">
+						</div>
+
+						<!-- password field -->
+						<div class="form-group py-3 ">
+							<label for="password_field">Password</label> <input
+								type="password" class="form-control" id="password_field"
+								aria-describedby="emailHelp" placeholder="Enter password">
+						</div>
+
+						<!-- text field -->
+						<div class="form-group py-3">
+							<label for="exampleFormControlTextarea1">Example textarea</label>
+							<textarea class="form-control" id="exampleFormControlTextarea1"
+								rows="8" placeholder="Enter something yourself"></textarea>
+						</div>
+						
+						 <!-- terms and condition agreem -->
+						 <div class="form-group form-check">
+						     <input type="checkbox"
+						     name="agreement"
+						     class="form-check-input"
+						     id="agreement">
+						     <label for="agreement">Accept terms and conditions</label>
+						   
+						 </div>
+
+						<div class="container my-4 text-align-center text-center">
+							<button type="submit" class="btn bg-primary text-white ">Submit</button>
+							<button type="reset" class="btn bg-primary text-white ">Reset</button>
+
+						</div>
+
+
+					</form>
+				</div>
+			</div>
+
+		</div>
+	</section>
+</body>
+</html>
